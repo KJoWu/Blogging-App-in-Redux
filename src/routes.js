@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Route, IndexRoute } from "react-router";
+import PostsIndex from "./components/posts_index";
 
 import App from "./components/app";
 
@@ -13,6 +14,7 @@ const Greeting = () =>{
 
 export default(
 	<Route path="/" component={App} > //whenever the user is at this path "/" show this component {App}
+		<IndexRoute component = {PostsIndex} /> //will show / and this route
 		<Route path="greet" component={Greeting} />
 		<Route path="greet2" component={Greeting} />
 		<Route path="greet3" component={Greeting} />
